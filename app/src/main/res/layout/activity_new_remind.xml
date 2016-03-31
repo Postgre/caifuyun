@@ -1,0 +1,216 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.ForContractActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <com.zepan.android.widget.CheckableEditText
+        android:id="@+id/et_remind_name"
+        style="@style/style7"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc"
+        android:hint="提醒名称"
+        android:paddingLeft="16dp" />
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RadioGroup
+        android:id="@+id/rg_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp" >
+
+        <RadioButton
+            android:id="@+id/rb_reminder_anniversary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/select_lines_bg_home"
+            android:button="@null"
+            android:checked="true"
+            android:drawableLeft="@drawable/selector_reminder_anniversary"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="纪念日"
+            android:textColor="@drawable/selector_text_bghome_whitle" />
+
+        <RadioButton
+            android:id="@+id/rb_reminder_finance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/select_lines_bg_home"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_reminder_finance"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="理财到期"
+            android:textColor="@drawable/selector_text_bghome_whitle" />
+
+        <RadioButton
+            android:id="@+id/rb_reminder_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/select_lines_bg_home"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_reminder_visit"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text="预约拜访"
+            android:textColor="@drawable/selector_text_bghome_whitle" />
+    </RadioGroup>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc" >
+
+        <TextView
+            android:id="@+id/tv_deadline"
+            style="@style/tv_release_product"
+            android:text="截止时间" />
+
+        <TextView
+            android:id="@+id/et_deadline"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_deadline"
+            android:background="@null"
+            android:clickable="true"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="选择截止时间"
+            android:maxLength="20"
+            android:onClick="show"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/et_deadline"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="选择截止时间"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_remind_time"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc" >
+
+        <TextView
+            android:id="@+id/tv_remind_time"
+            style="@style/tv_release_product"
+            android:text="提醒时间" />
+
+        <TextView
+            android:id="@+id/et_remind_time"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_remind_time"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="选择提醒时间"
+            android:maxLength="20"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_remind_reinvent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc" >
+
+        <TextView
+            android:id="@+id/tv_reinvent"
+            style="@style/tv_release_product"
+            android:text="重复设置" />
+
+        <TextView
+            android:id="@+id/et_reinvent"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_reinvent"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="选择重复设置"
+            android:maxLength="20"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc" >
+
+        <TextView
+            android:id="@+id/tv_repeat"
+            style="@style/tv_release_product"
+            android:text="结束重复" />
+
+        <TextView
+            android:id="@+id/et_repeat"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_repeat"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="选择结束时间"
+            android:maxLength="20"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/style14_white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/select_home_btn"
+        android:text="@string/save" />
+
+</LinearLayout>

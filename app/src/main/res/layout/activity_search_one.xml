@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context=".SearchOneActivity" >
+
+    <include layout="@layout/include_search" />
+
+    <!-- 一进来显示的界面 -->
+
+    <LinearLayout
+        android:id="@+id/ly_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/fcfcfc"
+            android:paddingBottom="20dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="18dp" >
+
+            <TextView
+                android:id="@+id/search_history"
+                style="@style/style5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_history" />
+
+            <ListView
+                android:id="@+id/list_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_history"
+                android:paddingTop="12dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- 输入文字的时候 -->
+
+    <LinearLayout
+        android:id="@+id/ly_enter_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_hint_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+</LinearLayout>

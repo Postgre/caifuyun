@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:padding="16dp"
+       android:orientation="horizontal"
+       >
+       <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_default_head"
+            android:contentDescription="@null" 
+            
+           />
+       <RelativeLayout 
+           android:layout_width="0dp"
+           android:layout_weight="3" 
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="16dp"
+           android:layout_gravity="center_vertical"
+           >
+           <TextView 
+               android:id="@+id/vip_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="张华宇"
+               android:textSize="18sp"
+              />
+           
+           <TextView 
+               android:id="@+id/text1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="("
+               android:layout_marginLeft="10dp"
+               android:layout_toRightOf="@+id/vip_name"
+               android:layout_marginRight="5dp"
+               />
+            <TextView 
+               android:id="@+id/sign"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="未报备"
+               android:layout_toRightOf="@+id/text1"
+               
+               />
+            <TextView 
+               android:id="@+id/text2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text=")"
+               android:layout_marginLeft="5dp"
+               android:layout_toRightOf="@+id/sign"
+               />
+           <TextView 
+               android:layout_below="@+id/vip_name"
+               android:id="@+id/company"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="6dp"
+               android:singleLine="true"
+               android:ellipsize="end"
+               android:text="华商证劵有限公司"
+               android:textSize="14sp"
+               android:textColor="#8d8d8d"
+               />
+       </RelativeLayout>
+           
+       
+   </LinearLayout>
+</LinearLayout>

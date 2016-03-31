@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        >
+      <TextView 
+          android:id="@+id/jounal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="日报"
+          
+          /> 
+         
+          <TextView 
+              android:id="@+id/tv1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/jounal"
+              android:text="【"
+              />
+          <TextView 
+              android:id="@+id/date"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/tv1"
+              android:text="2015-7-23"
+              />
+          <TextView 
+              android:id="@+id/tv2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@+id/date"
+              android:text="】"
+              /> 
+              <TextView
+                  android:id="@+id/time"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/jounal"
+                  android:paddingTop="8dp"
+                  android:text="12:36"
+                  />
+               <RadioButton 
+                  android:id="@+id/order"
+                  android:layout_width="wrap_content"
+                  android:paddingLeft="20dp"
+                  android:paddingRight="20dp"
+                  android:layout_height="30dp"
+                  android:text="未阅"
+                  android:button="@null"
+                  android:textSize="14sp"
+                  android:layout_centerVertical="true"
+                  android:background="@drawable/selector_read"
+                  android:layout_alignParentRight="true"
+                  android:textColor="@drawable/selector_read_text"
+                  />
+            
+    </RelativeLayout>
+
+    <FrameLayout
+        style="@style/lines_E7E7E7"
+        android:layout_marginLeft="16dp" />
+</LinearLayout>

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/head"
+    >
+    
+  <include layout="@layout/include_title"/>
+  
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fcfcfc"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" 
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_open_day"
+                            style="@style/tv_distribution_plan"
+                            android:text="开放日:" />
+
+                        <TextView
+                            android:id="@+id/open_day"
+                            style="@style/style14_393c3d"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_open_day"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+                    </RelativeLayout>
+        <FrameLayout
+           android:layout_marginLeft="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" 
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_collect_num"
+                            style="@style/tv_distribution_plan"
+                            android:text="本期募集总额:" 
+                           />
+
+                       <TextView
+                            android:id="@+id/collect_num"
+                            style="@style/style14_393c3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_collect_num"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <TextView
+                            style="@style/style18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/collect_num"
+                            android:text="万元" />
+                    </RelativeLayout>
+             <FrameLayout
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#d2d2d2" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" 
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_deadline"
+                            style="@style/tv_distribution_plan"
+                            android:text="截止抢购时间:" />
+
+                        <TextView
+                            android:id="@+id/deadline"
+                            style="@style/style14_393c3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_deadline"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        
+                    </RelativeLayout>
+
+         <FrameLayout
+           android:layout_marginLeft="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" >
+
+                        <TextView
+                            android:id="@+id/waring_notice"
+                            style="@style/style14_393c3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_waring_notice"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <TextView
+                            android:id="@+id/tv_unit"
+                            style="@style/style18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/waring_notice"
+                            android:text="万元" />
+
+                        <TextView
+                            android:id="@+id/tv_waring_notice"
+                            style="@style/tv_distribution_plan"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:text="募集预警通知:" />
+
+                    </RelativeLayout>
+
+         <FrameLayout
+           android:layout_marginLeft="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" >
+
+                        <TextView
+                            android:id="@+id/tv_found_scale"
+                            style="@style/tv_distribution_plan"
+                            android:text="成立规模:" />
+
+                        <TextView
+                            android:id="@+id/found_scale"
+                            style="@style/style14_393c3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_found_scale"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <TextView
+                            style="@style/style18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/found_scale"
+                            android:text="万元" />
+                    </RelativeLayout>
+
+       <FrameLayout
+           android:layout_marginLeft="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" >
+
+                        <TextView
+                            android:id="@+id/tv_big_money"
+                            style="@style/tv_distribution_plan"
+                            android:text="大单金额:" />
+
+                        <TextView
+                            android:id="@+id/big_money"
+                            style="@style/style14_393c3d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_big_money"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+
+                        <TextView
+                            style="@style/style393c3d_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/big_money"
+                            android:text="万元" />
+                    </RelativeLayout>
+                    
+        <FrameLayout
+           android:layout_marginLeft="16dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" >
+
+                        <TextView
+                            android:id="@+id/tv_upload"
+                            style="@style/tv_distribution_plan"
+                            android:text="是否上传客户资料:" 
+                           />
+
+                        <TextView
+                            android:id="@+id/upload"
+                            style="@style/style14_393c3d"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="22dp"
+                            android:layout_toRightOf="@+id/tv_upload"
+                            android:background="@null"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:singleLine="true"
+                            android:text="" />
+                    </RelativeLayout>
+        </LinearLayout>
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" 
+           />
+      <FrameLayout
+           android:layout_marginTop="10dp"
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" 
+           /> 
+                   
+       
+          <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+              
+                    <TextView
+                        android:id="@+id/salary_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="佣金起点"
+                        android:gravity="center"
+                        />
+
+                <FrameLayout style="@style/lines_horizontal_d2d2d2" />
+
+                    <TextView
+                        android:id="@+id/salary_ratio"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:text="佣金比率"
+                        android:gravity="center"
+                         />
+
+                
+            </LinearLayout>        
+                    
+        <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" 
+           /> 
+      
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+              
+                    <TextView
+                        android:id="@+id/salary_start_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:gravity="center"
+                        />
+
+                <FrameLayout style="@style/lines_horizontal_d2d2d2" />
+
+                    <TextView
+                        android:id="@+id/salary_ratio_num"
+                        android:layout_width="match_parent"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:gravity="center"
+                         />
+
+                
+            </LinearLayout>        
+                    
+        <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="0.5dp"
+           android:background="#d2d2d2" 
+           /> 
+</LinearLayout>

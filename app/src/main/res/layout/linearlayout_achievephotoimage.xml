@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zepan.android.widget.AchievePhotoImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://com.zepan.android.sdk/apk/res-auto"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:background="@drawable/ic_form_add"
+    android:contentDescription="@null"
+    android:gravity="center_vertical"
+    app:cropShape="square"
+    app:photoDialogLayout="@layout/dialog_achieve_photo" />

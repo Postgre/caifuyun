@@ -1,0 +1,1 @@
+package com.zepan.android.sdk;import org.json.JSONObject;/** * 接口处理网络请求回调。 * */public interface IRequestCallBack {	/**	 * json请求成功返回处理。	 * @param resultJson 请求成功返回结果	 * */	public void onResponse(JSONObject response);	/**	 * json请求失败返回处理。	 * @param errorMessage 请求失败错误信息	 * */	public void onErrorResponse(String errorMessage);}

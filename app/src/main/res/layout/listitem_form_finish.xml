@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="16dp"
+    >
+  
+    <LinearLayout 
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <TextView 
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="紫鑫盈泰"
+        android:textSize="15sp"
+        
+        />
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         
+        >
+         <TextView 
+        android:id="@+id/order_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报单金额"
+        
+        android:textSize="12sp"
+        android:textColor="#8d8d8d"
+        />
+    <TextView 
+        android:id="@+id/order_money_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="240"
+        android:layout_toRightOf="@+id/order_money"
+        android:layout_alignBottom="@+id/order_money"
+        android:textSize="16sp"
+        android:textColor="#fc9b3a"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView 
+        android:id="@+id/order_money_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="万"
+        android:layout_toRightOf="@+id/order_money_num"
+        
+        android:textSize="12sp"
+        android:textColor="#8d8d8d"
+        android:layout_marginLeft="3dp"
+        />
+    <TextView 
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报单时间 :"
+        android:layout_toRightOf="@+id/order_money_unit"
+        
+        android:textSize="12sp"
+        android:textColor="#8d8d8d"
+        android:layout_marginLeft="15dp"
+        />
+    <TextView 
+        android:id="@+id/order_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-03-09"
+        android:layout_toRightOf="@+id/text_time"
+        
+        android:textSize="12sp"
+        android:textColor="#8d8d8d"
+        android:layout_marginLeft="5dp"
+        />
+    </LinearLayout>
+  </LinearLayout> 
+              
+</RelativeLayout>

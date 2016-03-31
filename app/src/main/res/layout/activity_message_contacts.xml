@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+  
+    <!-- 通讯录 -->
+   <include layout="@layout/include_title"/>
+   <LinearLayout 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/head"
+       android:padding="10dp"
+       android:focusable="true" 
+       android:focusableInTouchMode="true" 
+       >
+       <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/et_input_recode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/search_shape"
+            android:drawableLeft="@drawable/ic_action_search_more"
+            android:hint="搜索"
+            android:paddingLeft="120dp"
+            android:minHeight="30dp"
+            android:textSize="14sp" />
+   </LinearLayout>
+   
+   <RelativeLayout 
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="10dp"
+         android:paddingBottom="10dp"
+         android:gravity="center"
+             
+         >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/company_40"
+            android:contentDescription="@null" 
+            android:layout_marginRight="20dp"
+            
+           />
+     <TextView 
+         android:id="@+id/name1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/image1"
+         android:text="公司通讯录"
+         android:textSize="18sp"
+         android:paddingTop="10dp"
+         /> 
+        
+     <ImageView 
+         android:id="@+id/iv_next1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_arrow_right"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="10dp"
+         />
+     </RelativeLayout>
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" 
+        android:background="#d2d2d2" />
+     <RelativeLayout 
+         android:id="@+id/phone_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="10dp"
+         android:paddingBottom="10dp"
+         android:gravity="center"
+             
+         >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/cellphone_40"
+            android:contentDescription="@null" 
+            android:layout_marginRight="20dp"
+            
+           />
+     <TextView 
+         android:id="@+id/name2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/image2"
+         android:text="手机通讯录"
+         android:textSize="18sp"
+         android:paddingTop="10dp"
+         /> 
+        
+     <ImageView 
+         android:id="@+id/iv_next2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_arrow_right"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="10dp"
+         />
+     </RelativeLayout>
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" 
+        android:background="#d2d2d2" />
+     <RelativeLayout 
+         android:id="@+id/group_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:paddingLeft="20dp"
+         android:paddingRight="20dp"
+         android:paddingTop="10dp"
+         android:paddingBottom="10dp"
+         android:gravity="center"
+             
+         >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/group_40"
+            android:contentDescription="@null" 
+            android:layout_marginRight="20dp"
+            
+           />
+     <TextView 
+         android:id="@+id/name3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_toRightOf="@+id/image3"
+         android:text="我的群组"
+         android:textSize="18sp"
+         android:paddingTop="10dp"
+         /> 
+        
+     <ImageView 
+         android:id="@+id/iv_next3"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_arrow_right"
+         android:layout_alignParentRight="true"
+         android:layout_marginTop="10dp"
+         />
+     </RelativeLayout>
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" 
+        android:background="#d2d2d2" />
+</LinearLayout>

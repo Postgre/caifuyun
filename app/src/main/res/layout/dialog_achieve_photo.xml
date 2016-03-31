@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ly_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/take_photo"
+            style="@style/style1988db_16"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selectable_background"
+            android:gravity="center"
+            android:text="拍照" />
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <TextView
+            android:id="@+id/select_photo"
+            style="@style/style1988db_16"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@drawable/selectable_background"
+            android:gravity="center"
+            android:text="选择照片" />
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            style="@style/style1988db_16"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/selectable_background"
+            android:gravity="center"
+            android:text="取消" />
+    </LinearLayout>
+
+</RelativeLayout>

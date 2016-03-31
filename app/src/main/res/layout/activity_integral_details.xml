@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+     
+     <include 
+         android:id="@+id/layout_title"
+         layout="@layout/include_title"/>
+       
+    <ScrollView 
+        android:layout_below="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+     <LinearLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    <com.facebook.drawee.view.SimpleDraweeView  
+        android:id="@+id/image_head"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        />
+    <TextView 
+        android:id="@+id/details_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="#757575"
+        android:text="优惠券"
+        />
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingBottom="15dp"
+        >
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/integral_0"
+            />
+        <TextView 
+            android:id="@+id/details_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="80"
+            android:textColor="@color/red"
+            android:paddingLeft="5dp"
+            />
+    </LinearLayout>
+    <TextView 
+       android:id="@+id/text"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="商品简介"
+       android:textSize="18sp"
+       android:textColor="#aaaa"
+       android:paddingLeft="20dp"
+       
+       />
+    <TextView 
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="20dp"
+        android:textColor="#757575"
+        />
+             <Button
+                  
+                   android:id="@+id/sure"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp"
+                   android:text="立即兑换"
+                   android:gravity="center"
+                   android:layout_marginBottom="30dp"
+                   android:textColor="@color/white"
+                   android:background="#1988db"
+                   
+                 />
+    </LinearLayout>
+   </ScrollView>            
+              
+    
+      
+</RelativeLayout>

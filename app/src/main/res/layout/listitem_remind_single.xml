@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/head"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_reminder_name"
+            style="@style/style393c3d_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_reminder_anniversary"
+            android:drawablePadding="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:singleLine="true"
+            android:text="客户生日"
+            android:gravity="center"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_reminder_check"
+            android:button="@null" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="46dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+         >
+
+        <TextView
+            android:id="@+id/tv_custom_name"
+            style="@style/style393c3d_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="4dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="客户:" />
+
+        <TextView
+            style="@style/style393c3d_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="4dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="许晴" />
+
+        <TextView
+            style="@style/style393c3d_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="4dp"
+            android:paddingRight="16dp"
+            android:paddingTop="5dp"
+            android:singleLine="true"
+            android:text="2015-6-15" />
+    </LinearLayout>
+
+</LinearLayout>

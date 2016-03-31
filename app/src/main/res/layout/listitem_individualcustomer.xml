@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fcfcfc"
+    android:orientation="vertical" >
+
+    <!-- 报单的litem -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:paddingTop="12dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/tv_item_content"
+                style="@style/style393c3d_15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="初步电话沟通，了解客户意向" />
+
+            <ImageView
+                android:id="@+id/iv_item_delete"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/select_trash" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_item_picture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fy_item_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:id="@+id/tv_item_voice"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/select_border_corners" />
+
+            <ImageView
+                android:id="@+id/iv_item_voice_animation"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/audio_list_voice"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_item_voice_hide"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_sound3" />
+        </FrameLayout>
+        <TextView
+            android:id="@+id/tv_item_gps_adress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_gps_blue"
+            android:drawablePadding="10dp"
+            android:ellipsize="end"
+            android:orientation="horizontal"
+            android:singleLine="true"
+            />
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/tv_item_time"
+            style="@style/styleaaaaaa_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2015-6-8" />
+    </LinearLayout>
+
+</LinearLayout>

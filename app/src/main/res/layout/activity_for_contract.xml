@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.ForContractActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical"
+         >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fcfcfc" >
+
+            <TextView
+                style="@style/styleaaaaaa_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingLeft="16dp"
+                android:text="@string/email_address" />
+
+            <com.zepan.android.widget.AlphaTextView
+                android:id="@+id/tv_new"
+                style="@style/style1988db_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingTop="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/tv_new" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/listitem_forcontract"
+            layout="@layout/listitem_forcontract" />
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc" >
+
+        <TextView
+            android:id="@+id/tv_contract_number"
+            style="@style/tv_release_product"
+            android:text="合同份数" />
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/et_contract_number"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_contract_number"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="请输入"
+            android:inputType="number"
+            android:maxLength="20"
+            android:singleLine="true"
+             />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <Button
+        android:id="@+id/for_contract"
+        style="@style/style14_white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/select_home_btn"
+        android:text="@string/for_contract" />
+
+</LinearLayout>

@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    tools:context=".RegisterActivity" >
+
+    <include
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_title"
+        android:orientation="vertical" >
+
+        <!-- 账号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fcfcfc"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/your_name"
+                    style="@style/tv_release_product"
+                    android:text="@string/name" />
+
+                <com.zepan.android.widget.CheckableEditText
+                    android:id="@+id/tv_name"
+                    style="@style/style7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@+id/your_name"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="输入姓名"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <FrameLayout
+                style="@style/lines_d2d2d2"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/password"
+                    style="@style/tv_release_product"
+                    android:text="@string/password" />
+
+                <com.zepan.android.widget.CheckableEditText
+                    android:id="@+id/tv_password"
+                    style="@style/style7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@+id/password"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="输入英数字下划线"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            style="@style/btn_register"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/select_home_btn"
+            android:text="@string/title_register" />
+    </LinearLayout>
+
+</RelativeLayout>

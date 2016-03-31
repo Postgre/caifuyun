@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.SelectPhoneActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical" >
+
+        <!-- selector_action_select ic_action_select -->
+
+        <RadioButton
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_action_select"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="手机"
+            android:textColor="@drawable/selector_text_bghome_393c3d"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/tv_work_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_action_select"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="工作电话"
+            android:textColor="@drawable/selector_text_bghome_393c3d"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/tv_address_phone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_action_select"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="住宅电话"
+            android:textColor="@drawable/selector_text_bghome_393c3d"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+</LinearLayout>

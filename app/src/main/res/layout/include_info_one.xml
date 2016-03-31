@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://com.zepan.android.sdk/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginTop="20dp" />
+    <!-- 生日 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="生日" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <TextView
+                android:id="@+id/tv_birthday"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="选择日期"
+                android:maxLength="20"
+                android:paddingRight="48dp"
+                android:singleLine="true"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 性别 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="性别" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.WheelTextView
+                android:id="@+id/tv_sex"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="选择性别"
+                android:maxLength="20"
+                android:paddingRight="48dp"
+                android:singleLine="true"
+                app:wheelHeight="200dp"
+                app:wheelValues="@array/wheel_sex" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 民族 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="民族" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:hint="选择民族" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 居住地 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="居住地" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:hint="选择地区" />
+        </RelativeLayout>
+        <!-- 身份证 -->
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="身份证" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_id"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="输入身份证号码"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#CDC5B7" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 教育程度 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="教育程度" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.WheelTextView
+                android:id="@+id/tv_eiduation"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="选择教育程度"
+                android:maxLength="20"
+                android:paddingRight="48dp"
+                android:singleLine="true"
+                app:wheelHeight="200dp"
+                app:wheelValues="@array/wheel_eduation" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+</LinearLayout>

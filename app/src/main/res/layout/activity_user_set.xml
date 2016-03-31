@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ind="http://com.zepan.android.sdk/apk/res-auto"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    android:background="@color/head"
+    >
+    
+  <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+   
+          
+           <com.zepan.android.widget.IndicatorListView
+                android:layout_below="@+id/include_title"
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                ind:itemValues="@array/settings" />
+           <FrameLayout
+                android:layout_below="@android:id/list"
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/head" />
+           <TextView 
+               android:layout_below="@+id/frame"
+               android:id="@+id/edit"
+               android:layout_width="match_parent"
+               android:layout_height="70dp"
+               android:text="退出登录"
+               android:textSize="18sp"
+               android:gravity="center"
+               android:background="@color/white"
+               />
+      <FrameLayout
+        android:layout_below="@+id/include_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+        <View
+            android:id="@+id/view_mask_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#11000000"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+        <com.zepan.android.widget.ShareView
+            android:id="@+id/shareView_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" />
+    </FrameLayout>
+</RelativeLayout>

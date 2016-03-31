@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="wheel_values">
+        <item>Command one</item>
+        <item>Command two</item>
+        <item>Command three</item>
+    </string-array>
+</resources>

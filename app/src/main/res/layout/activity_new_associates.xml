@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.zepan.caifuyun"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.OrderActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical"
+        android:paddingLeft="16dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/tv_release_product"
+                android:text="@string/name" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/ed_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/tv_name"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入姓名"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/tv_release_product"
+                android:text="@string/phone" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/ed_phone"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/tv_phone"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入电话号码"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/tv_relation"
+                style="@style/tv_release_product"
+                android:text="@string/relation" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/ed_relation"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/tv_relation"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请输入关系"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc"
+        android:paddingLeft="16dp" >
+
+        <TextView
+            android:id="@+id/tv_note"
+            style="@style/tv_release_product"
+            android:text="@string/note" />
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/ed_note"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/tv_note"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="请输入备注"
+            android:maxLength="20"
+            android:singleLine="true" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/style14_white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/select_home_btn"
+        android:text="@string/save" />
+
+</LinearLayout>

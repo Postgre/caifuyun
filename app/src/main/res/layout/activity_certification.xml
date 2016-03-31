@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical" >
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/edtTx_company_name "
+            style="@style/editText_register"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:hint="输入公司名称"
+            android:paddingLeft="16dp"
+            android:singleLine="true" />
+
+        <RelativeLayout
+            android:id="@+id/ry_createcompany"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/style1988db_14"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:drawableLeft="@drawable/ic_action_add"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical"
+                android:text="创建新公司" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:listitem="@layout/listitem_certification" />
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+    </LinearLayout>
+
+</LinearLayout>

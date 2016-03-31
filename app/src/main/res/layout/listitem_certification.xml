@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selectable_background"
+    android:orientation="vertical"
+    android:paddingLeft="16dp" >
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        style="@style/style393c3d_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingRight="16dp"
+        android:paddingTop="13dp"
+        android:singleLine="true"
+        android:text="民泰资产——锦越6号" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingRight="16dp" >
+
+        <TextView
+            android:id="@+id/tv_date"
+            style="@style/style10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015-6-5" />
+
+        <TextView
+            style="@style/style10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加入" />
+
+        <TextView
+            android:id="@+id/tv_company_num"
+            style="@style/style10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="52" />
+
+        <TextView
+            style="@style/style10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="成员" />
+    </LinearLayout>
+
+</LinearLayout>

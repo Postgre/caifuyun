@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fcfcfc"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.adapter.HomeFragment" >
+
+    <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+
+    <RadioGroup
+        android:id="@+id/RadioGroup_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_all_clues"
+            style="@style/style1988db_13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="全部线索"
+            android:textColor="@drawable/selector_check" />
+
+        <FrameLayout
+            style="@style/lines_d2d2d2"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp" />
+
+        <RadioButton
+            android:id="@+id/rb_key_clues"
+            style="@style/style1988db_13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="重点线索"
+            android:textColor="@drawable/selector_check" />
+
+        <!-- <FrameLayout
+            style="@style/lines_d2d2d2"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp" />
+
+        <RadioButton
+            android:id="@+id/rb_general_clue"
+            style="@style/style1988db_13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="一般线索"
+            android:textColor="@drawable/selector_check" /> -->
+    </RadioGroup>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

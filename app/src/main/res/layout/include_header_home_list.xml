@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/white"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:id="@+id/ly_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="bottom|center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_view"
+        style="@style/style757575_11"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/fcfcfc"
+        android:drawableLeft="@drawable/ic_broadcast"
+        android:drawablePadding="9dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="16dp"
+        android:text="滚动系统消息" />
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ly_trustproduct"
+                style="@style/homeLinearLayout" >
+
+                <com.zepan.android.widget.AlphaImageView
+                    android:id="@+id/iv_product_tr"
+                    style="@style/homeimageview"
+                    android:background="@drawable/select_oval_product_tr"
+                    android:src="@drawable/ic_product_tr" />
+
+                <com.zepan.android.widget.AlphaTextView
+                    android:id="@+id/tv_product_tr"
+                    style="@style/hometextview"
+                    android:text="@string/tv_product_tr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_product_am"
+                style="@style/homeLinearLayout" >
+
+                <com.zepan.android.widget.AlphaImageView
+                    android:id="@+id/iv_product_am"
+                    style="@style/homeimageview"
+                    android:background="@drawable/select_oval_product_am"
+                    android:src="@drawable/ic_product_am" />
+
+                <com.zepan.android.widget.AlphaTextView
+                    android:id="@+id/tv_product_am"
+                    style="@style/hometextview"
+                    android:text="@string/tv_product_am" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_product_pe"
+                style="@style/homeLinearLayout" >
+
+                <com.zepan.android.widget.AlphaImageView
+                    android:id="@+id/iv_product_pe"
+                    style="@style/homeimageview"
+                    android:background="@drawable/select_oval_product_pe"
+                    android:src="@drawable/ic_product_pe" />
+
+                <com.zepan.android.widget.AlphaTextView
+                    android:id="@+id/tv_product_pe"
+                    style="@style/hometextview"
+                    android:text="@string/tv_product_pe" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_product_po"
+                style="@style/homeLinearLayout" >
+
+                <com.zepan.android.widget.AlphaImageView
+                    android:id="@+id/iv_product_po"
+                    style="@style/homeimageview"
+                    android:background="@drawable/select_oval_product_po"
+                    android:src="@drawable/ic_product_po" />
+
+                <com.zepan.android.widget.AlphaTextView
+                    android:id="@+id/tv_product_po"
+                    style="@style/hometextview"
+                    android:text="所有" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_product_others"
+                style="@style/homeLinearLayout"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_product_others"
+                    style="@style/homeimageview"
+                    android:background="@drawable/select_oval_product_others"
+                    android:src="@drawable/ic_product_others" />
+
+                <TextView
+                    style="@style/hometextview"
+                    android:text="@string/tv_product_others" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        style="@style/styleaaaaaa_13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="14dp"
+        android:singleLine="true"
+        android:text="热销产品" />
+
+</LinearLayout>

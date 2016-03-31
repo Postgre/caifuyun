@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/edtTx_name"
+            style="@style/editText_register"
+            android:layout_height="48dp"
+            android:gravity="center_vertical"
+            android:hint="输入手机号"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:inputType="phone" />
+
+        <Button
+            android:id="@+id/btn_send_verification_code"
+            style="@style/btn_register"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="@dimen/activity_16"
+            android:layout_marginRight="@dimen/activity_16"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/select_home_btn"
+            android:text="@string/send_verification_code" />
+    </LinearLayout>
+
+</LinearLayout>

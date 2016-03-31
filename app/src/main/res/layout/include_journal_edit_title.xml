@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+        
+    >
+    
+  <TextView 
+    android:id="@+id/time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2015-5-9"
+    android:textColor="#8d8d8d"
+    />
+  
+  <!-- 新增 -->
+  <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="5dp"
+      >
+      
+      <TextView 
+      android:id="@+id/add" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="新增:"
+      />
+      
+      <TextView 
+      android:id="@+id/add_clues" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="线索"
+      android:paddingLeft="10dp"
+      />
+      
+    
+     <RadioButton 
+         android:id="@+id/clues_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="3"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+         />
+      
+      <TextView 
+      android:id="@+id/add_customer" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="客户"
+      android:paddingLeft="20dp"
+      />
+
+      <RadioButton
+          android:id="@+id/add_customer_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="5dp"
+          android:background="@drawable/journal_edit_button"
+          android:button="@null"
+          android:gravity="center"
+          android:paddingBottom="2dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:text="6"
+          android:textColor="@color/bg_home"
+          android:textSize="11sp" />
+      
+      <TextView 
+      android:id="@+id/add_channel" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="渠道"
+      android:paddingLeft="20dp"
+      />
+      
+      <RadioButton 
+          android:id="@+id/add_channel_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="45"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+          />
+      
+  </LinearLayout>
+  
+  <!-- 跟进 -->
+  <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="5dp"
+      >
+      
+      <TextView 
+      android:id="@+id/follow" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="跟进:"
+      />
+      
+      <TextView 
+      android:id="@+id/follow_customer" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="客户"
+      android:paddingLeft="10dp"
+      />
+      
+      <RadioButton 
+          android:id="@+id/follow_customer_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="23"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+          />
+      
+      <TextView 
+      android:id="@+id/follow_channel" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="渠道"
+      android:paddingLeft="20dp"
+      />
+      
+      <RadioButton 
+          android:id="@+id/follow_channel_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="12"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+          />
+      
+  </LinearLayout>
+  <!-- 业绩 -->
+  <LinearLayout 
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:paddingTop="5dp"
+      >
+      <TextView 
+      android:id="@+id/performance" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="业绩:"
+      />
+      
+      <TextView 
+      android:id="@+id/order_account" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="预约金额"
+      android:paddingLeft="10dp"
+      />
+      
+      <RadioButton 
+          android:id="@+id/order_account_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="15"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+          />
+      
+      <TextView 
+      android:id="@+id/bill_account" 
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="报单金额"
+      android:paddingLeft="20dp"
+      />
+      
+      <RadioButton 
+          android:id="@+id/bill_account_num"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="32"
+          android:textSize="11sp"
+          android:button="@null"
+          android:layout_marginLeft="5dp"
+          android:paddingLeft="15dp"
+          android:paddingRight="15dp"
+          android:paddingTop="2dp"
+          android:paddingBottom="2dp"
+          android:gravity="center"
+          android:background="@drawable/journal_edit_button"
+          android:textColor="@color/bg_home"
+          />
+  </LinearLayout>
+  
+</LinearLayout>

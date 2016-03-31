@@ -1,0 +1,189 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:sdk="http://com.zepan.android.sdk/apk/res-auto"
+    xmlns:app="http://com.zepan.android.sdk/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.OrderActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical"
+        android:paddingLeft="16dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/company"
+                style="@style/tv_release_product"
+                android:text="@string/company_name" />
+
+            <TextView
+                android:id="@+id/et_company_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/company"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/organization_code"
+                style="@style/tv_release_product"
+                android:text="@string/organization_code" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_organization_code_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/organization_code"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/company_address"
+                style="@style/tv_release_product"
+                android:text="@string/company_address" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_company_address_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/company_address"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/phone_company"
+                style="@style/tv_release_product"
+                android:text="@string/phone_company" />
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_phone_company"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/phone_company"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp" >
+
+            <TextView
+                android:id="@+id/corporate_charter"
+                style="@style/tv_release_product"
+                android:text="@string/corporate_charter" />
+
+            <com.zepan.android.widget.AchievePhotoImageView
+                android:id="@+id/iv_corporate_charter"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/corporate_charter"
+                android:contentDescription="@null"
+                android:gravity="center_vertical"
+                android:background="@drawable/ic_form_add"
+                app:cropShape="square"
+                app:photoDialogLayout="@layout/dialog_achieve_photo"
+                />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/fcfcfc"
+        android:paddingLeft="16dp" >
+
+        <TextView
+            android:id="@+id/legal_person_id_card"
+            style="@style/tv_release_product"
+            android:text="@string/legal_person_id_card" />
+
+        <com.zepan.android.widget.AchievePhotoImageView
+            android:id="@+id/iv_legal_person_id_card"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@+id/legal_person_id_card"
+            android:background="@drawable/ic_form_add"
+            android:contentDescription="@null"
+            android:gravity="center_vertical"
+            app:cropShape="square"
+            app:photoDialogLayout="@layout/dialog_achieve_photo"
+            />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <Button
+        android:id="@+id/submit_certification"
+        style="@style/style14_white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/select_home_btn"
+        android:text="@string/submit_certification" />
+
+</LinearLayout>

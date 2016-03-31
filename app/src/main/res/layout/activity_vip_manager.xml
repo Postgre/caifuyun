@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   <include layout="@layout/include_title"/>
+   
+
+    <com.yiciyuan.easycomponent.listview.ECListViewLayout
+        android:id="@+id/eclistLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:itemLayout="@layout/listitem_vip_manager"
+        app:listKeyInJson="list"
+        app:loadSize="10"
+        app:requestMethod="post"
+        app:refreshComponent="pullToRefresh"
+        app:refreshMode="up"
+        app:url="http://120.26.789.31/get_vip_manager">
+        </com.yiciyuan.easycomponent.listview.ECListViewLayout>
+</LinearLayout>

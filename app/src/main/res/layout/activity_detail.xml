@@ -1,0 +1,258 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.DetailActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="联系方式" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <!-- 手机 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="手机" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <TextView
+                            android:id="@+id/tv_phone_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="18503875133" />
+
+                        <ImageView
+                            android:id="@+id/iv_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/iv_phone"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_action_message" />
+
+                        <ImageView
+                            android:id="@+id/iv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_action_call" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!-- 工作电话 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="工作电话" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <TextView
+                            android:id="@+id/tv_work_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="021-52538726" />
+
+                        <ImageView
+                            android:id="@+id/iv_work_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_action_call" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!-- 邮箱 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="10dp"
+                        android:text="邮箱" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3" >
+
+                        <TextView
+                            android:id="@+id/tv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="18503875133@163.com" />
+
+                        <ImageView
+                            android:id="@+id/iv_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:padding="5dp"
+                            android:src="@drawable/ic_action_mail" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <FrameLayout style="@style/lines_d2d2d2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_self_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="个人信息" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <com.zepan.caifuyun.widget.ScrollNormalListView
+                android:id="@+id/list_self_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.zepan.caifuyun.widget.ScrollNormalListView>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <TextView
+                android:id="@+id/tv_balance_sheets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="资产状况" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <com.zepan.caifuyun.widget.ScrollNormalListView
+                android:id="@+id/list_balance_sheets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.zepan.caifuyun.widget.ScrollNormalListView>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <TextView
+                android:id="@+id/tv_liabilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="负债状况" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <com.zepan.caifuyun.widget.ScrollNormalListView
+                android:id="@+id/list_liabilities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.zepan.caifuyun.widget.ScrollNormalListView>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <TextView
+                android:id="@+id/tv_family_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="家庭信息" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <com.zepan.caifuyun.widget.ScrollNormalListView
+                android:id="@+id/list_family_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.zepan.caifuyun.widget.ScrollNormalListView>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <TextView
+                android:id="@+id/tv_family_member_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:text="家庭成员信息" />
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+
+            <com.zepan.caifuyun.widget.ScrollNormalListView
+                android:id="@+id/list_family_member_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.zepan.caifuyun.widget.ScrollNormalListView>
+
+            <FrameLayout
+                style="@style/lines_d2d2d2"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

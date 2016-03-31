@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://com.zepan.android.sdk/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    tools:context=".RegisterActivity" >
+
+    <include
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head_title"
+        android:orientation="vertical" >
+
+        <!-- 账号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fcfcfc"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/company"
+                    style="@style/tv_release_product"
+                    android:text="@string/company_name" />
+
+                <com.zepan.android.widget.CheckableEditText
+                    android:id="@+id/tv_company_name"
+                    style="@style/style7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@+id/company"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+            </RelativeLayout>
+
+            <FrameLayout
+                style="@style/lines_d2d2d2"
+                android:layout_marginLeft="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/company_size"
+                    style="@style/tv_release_product"
+                    android:text="@string/company_size" />
+
+                <com.zepan.android.widget.WheelTextView
+                    android:id="@+id/tv_company_size"
+                    style="@style/style7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_toRightOf="@+id/company_size"
+                    android:background="@null"
+                    android:drawableRight="@drawable/selector_focus"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="选择公司规模"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    app:wheelHeight="200dp"
+                    android:paddingRight="48dp"
+                    app:wheelValues="@array/wheel_values" />
+            </RelativeLayout>
+
+            <FrameLayout style="@style/lines_d2d2d2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_register"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/select_home_btn"
+            android:text="@string/submit" />
+    </LinearLayout>
+
+</RelativeLayout>

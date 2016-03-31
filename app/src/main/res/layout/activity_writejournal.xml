@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+    
+<include layout="@layout/include_title" />
+<include layout="@layout/include_journal_edit_title"/>
+<LinearLayout 
+    android:id="@+id/frlay_journal_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <EditText 
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="今日总结"
+        android:textSize="13sp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textColor="#aaaaaa"
+        android:paddingBottom="200dp"
+        android:background="@drawable/writejournal_edittext"
+        />
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="#d2d2d2" />
+   
+     <RelativeLayout 
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:gravity="center"
+         android:paddingLeft="16dp"
+         android:paddingRight="16dp"
+         >
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="审批人"
+             />
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toLeftOf="@+id/iv_next"
+             android:text="点击选择" 
+             android:textColor="#aaaaaa"      
+             />
+         <ImageView 
+             android:id="@+id/iv_next"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@drawable/ic_arrow_right"
+             android:layout_alignParentRight="true"
+             />
+     </RelativeLayout>
+     <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d2d2d2" />
+ 
+</LinearLayout>
+
+  </LinearLayout>   
+    
+         <Button 
+         android:id="@+id/sure"
+         android:layout_width="match_parent"
+         android:layout_height="40dp"
+         android:layout_marginLeft="16dp"
+         android:layout_marginRight="16dp"
+         android:text="确认"
+         android:gravity="center"
+         android:layout_gravity="bottom"
+         android:layout_marginTop="16dp"
+         android:layout_marginBottom="16dp"
+         android:textColor="@color/white"
+         android:background="#1988db"
+         
+         />
+    </LinearLayout>     
+     
+   </ScrollView>     
+</FrameLayout>

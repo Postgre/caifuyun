@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+<!-- 销售日报 -->
+   <RelativeLayout
+       android:id="@+id/ly_salesjournal_title"
+       android:layout_width="match_parent"
+       android:layout_height="56.5dp"
+       android:background="@color/head"
+       
+       >
+       <com.zepan.android.widget.AlphaImageView
+           android:id="@+id/iv_back"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:src="@drawable/ic_action_back"
+           android:layout_alignParentLeft="true"
+           android:padding="10dp"
+           android:onClick="click"
+           />
+       <TextView 
+           android:id="@+id/title"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:text="@string/sales_journal"
+           android:layout_centerInParent="true"
+           android:gravity="center"
+           android:textSize="17sp"
+           />
+       <LinearLayout 
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_alignParentRight="true"
+           android:orientation="horizontal"
+            android:padding="10dp"
+           >
+           <com.zepan.android.widget.AlphaImageView 
+           android:id="@+id/iv_add"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:src="@drawable/ic_action_add"
+           
+           />
+       <com.zepan.android.widget.AlphaImageView
+           android:id="@+id/iv_more"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:src="@drawable/ic_action_more"
+           android:layout_marginLeft="5dp"
+           android:visibility="gone"
+        />
+       </LinearLayout>
+       
+   </RelativeLayout>
+   
+   <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d2d2d2" />
+   <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_commit"
+            style="@style/style1988db_13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="我提交的日报"
+            android:textColor="@drawable/selector_check" />
+
+        <FrameLayout
+            style="@style/lines_d2d2d2"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp" />
+
+        <RadioButton
+            android:id="@+id/rb_read"
+            style="@style/style1988db_13"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="我批阅的日报"
+            android:textColor="@drawable/selector_check" />
+    </RadioGroup>
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

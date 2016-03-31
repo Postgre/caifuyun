@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:background="@color/head"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/head" >
+
+        <com.zepan.android.widget.AlphaImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:onClick="goBack"
+            android:padding="16dp"
+            android:src="@drawable/ic_action_back" />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_all"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="个人"
+                android:textColor="@drawable/selector_ck_bottom_textcolor"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbtn_anonymous"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:button="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="机构"
+                android:textColor="@drawable/selector_ck_bottom_textcolor"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <com.zepan.android.widget.AlphaImageView
+            android:id="@+id/iv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d2d2d2" />
+
+</LinearLayout>

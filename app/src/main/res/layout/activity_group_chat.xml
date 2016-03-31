@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/head">
+    
+<!-- 用于测试 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/head" >
+
+        <com.zepan.android.widget.AlphaImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_return"
+            android:padding="16dp" />
+        
+        <TextView
+            android:id="@+id/tv_left"
+            style="@style/style1_gravity"
+            android:layout_toRightOf="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:singleLine="true" 
+            android:text="笑傲江湖"
+            />
+
+      <com.zepan.android.widget.AlphaImageView
+            android:id="@+id/iv_more"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/more"
+            android:contentDescription="@string/app_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+             />
+      <com.zepan.android.widget.AlphaImageView
+            android:id="@+id/iv_right"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/member"
+            android:contentDescription="@string/app_name"
+            android:layout_toLeftOf="@+id/iv_more" 
+           
+            />
+    </RelativeLayout>
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d2d2d2" />
+    
+</LinearLayout>

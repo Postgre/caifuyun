@@ -1,0 +1,1 @@
+package com.zepan.android.sdk;/** * 包含配置的一些常量 * */public class Config {		/**与http相关的配置*/	public static class Http{		/**请求的Url，结尾加/*/		public static final String URL = "http://119.254.101.12:8085/";		/**业务处理成功后的result返回值*/		public static final int RESULT_VALUE = 0;	}}

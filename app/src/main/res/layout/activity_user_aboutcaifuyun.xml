@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head">
+    
+     <include
+        android:id="@+id/include_title"
+        layout="@layout/include_title" />
+    <LinearLayout 
+        android:layout_below="@+id/include_title"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView 
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+           
+            />
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蜜蜂云"
+            android:textSize="18sp"
+            android:paddingTop="6dp"
+            />
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            >
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本号 :"
+            android:textColor="#8d8d8d"
+            android:textSize="14sp"
+            />
+            <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v1.0.0"
+            android:layout_marginLeft="10dp"
+            android:textColor="#8d8d8d"
+            android:textSize="14sp"
+            />
+        </LinearLayout>
+        
+    </LinearLayout>
+    <TextView 
+        android:layout_below="@+id/layout"
+        android:id="@+id/introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="财富云是服务于理财师的以移动互联未核心的创新型金融产品发行."
+        android:textColor="#8d8d8d"
+        android:textSize="14sp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        />
+    
+        <TextView 
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上海迦南财富有限公司"
+        android:textColor="#8d8d8d"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="15dp"
+        />
+   
+   
+</RelativeLayout>

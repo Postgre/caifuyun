@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="群聊名称"
+            android:textSize="15sp" />
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/et_name"
+            style="@style/editText_register"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:layout_marginRight="16dp"
+            android:textSize="13sp" >
+
+            <requestFocus />
+        </com.zepan.android.widget.CheckableEditText>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_gravity="right"
+            android:orientation="horizontal" 
+            android:layout_marginRight="16dp" >
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="取消"
+                android:textSize="14sp"
+                android:textColor="#4b618d" />
+
+            <TextView
+                android:id="@+id/tv_sure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="确定"
+                android:textSize="14sp"
+                android:textColor="#4b618d" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

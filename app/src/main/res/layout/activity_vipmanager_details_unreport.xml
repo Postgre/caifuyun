@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/head">
+    
+    <include layout="@layout/include_title"
+        android:id="@+id/title"
+        />
+    
+    <ScrollView 
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout 
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+         <RelativeLayout
+          
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" 
+          android:padding="20dp"
+          android:background="@color/fcfcfc" 
+        >
+         <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iv_head"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@null"
+            fresco:roundingBorderWidth="1dp" 
+            android:background="@drawable/ic_default_head"
+            />
+          <LinearLayout 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:layout_toRightOf="@+id/iv_head"
+              android:layout_marginLeft="16dp"
+              >
+              <TextView 
+                  android:id="@+id/name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="李晓明"
+                  android:textSize="18sp"
+                  
+                  />
+              
+              <TextView 
+                  android:id="@+id/company"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="华商证券股份有限公司"
+                  android:textColor="#757575"
+                  android:layout_marginTop="16dp"
+                  />
+          </LinearLayout>
+        </RelativeLayout>
+          <FrameLayout
+              
+              style="@style/lines_d2d2d2"
+              android:layout_marginTop="10dp"
+           />
+              <RelativeLayout
+                  
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/fcfcfc" 
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_label"
+                        style="@style/style5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="标签" />
+
+                    <TextView
+                        android:id="@+id/tv_tags1"
+                        style="@style/style1988db_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_label"
+                        android:paddingRight="16dp"
+                        android:text="商会会员" />
+
+                    <TextView
+                        android:id="@+id/tv_tags2"
+                        style="@style/style1988db_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_tags1"
+                        android:paddingRight="16dp"
+                        android:text="金融机构" />
+                    <TextView
+                        android:id="@+id/tv_tags3"
+                        style="@style/style1988db_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_tags2"
+                        android:text="高尔夫" />
+                </RelativeLayout>
+                
+              <FrameLayout
+              
+               style="@style/lines_d2d2d2"
+               android:layout_marginTop="10dp"
+              />
+              <RelativeLayout
+                   
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/fcfcfc" 
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_phone"
+                        style="@style/style5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:text="电话" />
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_phone"
+                        android:paddingRight="16dp"
+                        android:text="13814733521" 
+                        android:textSize="14sp"/>
+
+                    
+                </RelativeLayout>
+              <FrameLayout
+                 
+                 android:layout_width="match_parent"
+                 android:layout_height="0.5dp"
+                 android:background="#d2d2d2" />
+
+              <RelativeLayout
+                  
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/fcfcfc" 
+                   
+                    >
+
+                    <TextView
+                        android:id="@+id/describe"
+                        style="@style/style5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="16dp"
+                        android:text="描述" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/describe"
+                        android:paddingTop="16dp"
+                        android:paddingBottom="16dp"
+                        android:paddingRight="16dp"
+                        android:text="业务完成度99%，在长城一号项目中粉红7%，2次或死亡优秀员工称号" 
+                        android:textSize="14sp"/>
+            </RelativeLayout>
+              </LinearLayout>    
+    </ScrollView>
+             <Button 
+                   
+                   android:id="@+id/sure"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:layout_marginLeft="16dp"
+                   android:layout_marginRight="16dp"
+                   android:text="报备"
+                   android:gravity="center"
+                   android:textColor="@color/white"
+                   android:background="#1988db"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginBottom="30dp"
+                 />
+        
+   
+</RelativeLayout>

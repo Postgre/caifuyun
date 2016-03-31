@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_remind_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_remind_name"
+            style="@style/style393c3d_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@drawable/ic_reminder_deal"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="林泽云客户" />
+
+        <TextView
+            android:id="@+id/tv_file_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/select_border_bg_home"
+            android:gravity="center"
+            android:text="3" />
+    </RelativeLayout>
+
+    <com.zepan.caifuyun.widget.MyListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.zepan.caifuyun.widget.MyListView>
+
+
+</LinearLayout>

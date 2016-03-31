@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- GenderSheetDialog -->
+    <string name="title">请选择性别</string>
+    <string name="female">女</string>
+    <string name="male">男</string>
+	
+</resources>

@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fcfcfc"
+    android:orientation="vertical"
+    tools:context=".SearchOneActivity" >
+
+    <include layout="@layout/include_search" />
+
+    <!-- 一进来显示的界面 -->
+
+    <LinearLayout
+        android:id="@+id/ly_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/listitem_personal" />
+    </LinearLayout>
+
+    <!-- 输入文字的时候 -->
+
+    <LinearLayout
+        android:id="@+id/ly_enter_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list_hint_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <!-- 回车键 -->
+
+    <LinearLayout
+        android:id="@+id/ly_enter_key"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fcfcfc"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="18dp" >
+
+            <TextView
+                android:id="@+id/products"
+                style="@style/style5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/products" />
+
+            <ListView
+                android:id="@+id/list_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

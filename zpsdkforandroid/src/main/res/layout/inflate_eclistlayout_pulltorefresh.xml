@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--post test url-http://120.25.162.96:9001/product_list--><!--get test url-http://120.26.67.31/account/contact/get-all-->
+<com.yiciyuan.easycomponent.listview.ECPullToRefreshListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+/>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selectable_background"
+    android:orientation="vertical"
+    android:paddingLeft="16dp" >
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        style="@style/style393c3d_15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="10dp"
+        android:paddingRight="16dp"
+        android:paddingTop="13dp"
+        android:singleLine="true"
+        android:text="" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingRight="16dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/net_fund"
+                style="@style/style10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/net_fund" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/net_fund" >
+
+                <!-- 基金金额 -->
+
+                <TextView
+                    android:id="@+id/tv_net_fund"
+                    style="@style/style7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLength="4"
+                    android:singleLine="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/style10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/amount" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amount" >
+
+                <TextView
+                    android:id="@+id/tv_min_amount"
+                    style="@style/style7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+                <!-- 最小的投资数量 -->
+
+                <TextView
+                    android:id="@+id/tv_unit"
+                    style="@style/style393c3d_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_min_amount"
+                    android:gravity="bottom"
+                    android:text="万" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/investment_horizon"
+                style="@style/style10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/investment_horizon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/investment_horizon" >
+
+                <!-- 投资期限 -->
+
+                <TextView
+                    android:id="@+id/tv_deadline"
+                    style="@style/style7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_deadline_unit"
+                    style="@style/style18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv_deadline"
+                    android:text="个月" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/tv_rebate_proportion"
+                style="@style/style10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rebate_proportion" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rebate_proportion" >
+
+                <!-- 返佣比例 -->
+
+                <TextView
+                    android:id="@+id/proportion"
+                    style="@style/style11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:maxLength="4"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/style393c3d_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/proportion"
+                    android:text="%" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingRight="16dp" >
+
+        <ProgressBar
+            android:id="@+id/loadProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/tv_percent"
+            android:max="0"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbar" />
+
+        <com.zepan.caifuyun.widget.ProgressTextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="12dp"
+            android:text="0%"
+            android:textColor="@color/bg_home"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="16dp" />
+
+</LinearLayout>

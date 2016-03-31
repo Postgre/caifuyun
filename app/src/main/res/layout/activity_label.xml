@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.ForContractActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <com.zepan.caifuyun.widget.FlowLayout
+        android:id="@+id/addtag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" >
+
+        <EditText
+            android:id="@+id/add_edit"
+            style="@style/style1988db_14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="输入标签"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:textSize="14sp" />
+    </com.zepan.caifuyun.widget.FlowLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <com.zepan.caifuyun.widget.FlowLayout
+        android:id="@+id/tag_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" >
+    </com.zepan.caifuyun.widget.FlowLayout>
+
+</LinearLayout>

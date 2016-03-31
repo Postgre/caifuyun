@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    tools:context=".RegisterActivity" >
+
+    <include
+        android:id="@+id/head_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        layout="@layout/include_title"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@+id/head_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_default_show" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_head"
+        android:layout_marginTop="14dp"
+        android:orientation="vertical" >
+
+        <!-- 账号 -->
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fcfcfc"
+            android:orientation="vertical" >
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/edtTx_name"
+                style="@style/editText_register"
+                android:layout_height="48dp"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:hint="手机/蜜蜂账号"
+                android:singleLine="true"
+                 >
+
+                <requestFocus />
+            </com.zepan.android.widget.CheckableEditText>
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/edtTx_pwd"
+                style="@style/editText_register"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingLeft="16dp"
+                android:singleLine="true"
+                />
+
+            <!-- <FrameLayout style="@style/lines_d2d2d2" /> -->
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            style="@style/btn_register"
+            android:layout_marginBottom="36dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/select_home_btn"
+            android:text="@string/login" />
+    </LinearLayout>
+
+    <com.zepan.android.widget.AlphaTextView
+        android:id="@+id/tv_register"
+        style="@style/tv_register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:text="注册新账号" />
+
+</RelativeLayout>

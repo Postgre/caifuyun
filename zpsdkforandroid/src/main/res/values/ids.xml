@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 界面顶部内容id -->
+    <item type="id" name="tv_left"></item>
+    <item type="id" name="tv_center"></item>
+    <item type="id" name="tv_right"></item>
+    <item type="id" name="iv_left"></item>
+    <item type="id" name="iv_center"></item>
+    <item type="id" name="iv_right"></item>
+     <item type="id" name="tab_group"></item>
+</resources>

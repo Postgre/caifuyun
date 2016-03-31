@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_search_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fcfcfc"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" >
+
+        <ImageView
+            android:id="@+id/iv_head"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_form_add" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_head"
+            android:layout_alignTop="@+id/iv_head"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/iv_head" >
+
+            <TextView
+                android:id="@+id/tv_company_name"
+                style="@style/style393c3d_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="任雪" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/tv_institutions_category"
+                    style="@style/style757575_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/institutions_category" />
+
+                <TextView
+                    android:id="@+id/tv_investment_type"
+                    style="@style/style757575_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_institutions_category"
+                    android:text="任雪" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        style="@style/lines_E7E7E7"
+        android:layout_marginLeft="16dp" />
+
+</LinearLayout>

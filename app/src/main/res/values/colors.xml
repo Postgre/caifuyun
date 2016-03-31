@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="no_bg_home">#007dc9</color>
+    <color name="bg_home">#1998db</color>
+    <color name="light_grey">#f0f0f0</color>
+    <color name="super_light_grey">#f6f6f6</color>
+    <color name="B2B2B2">#B2B2B2</color>
+    <color name="cdcdcd">#393c3d</color>
+    <color name="aaaaaa">#aaaaaa</color>
+    <color name="fcfcfc">#ffffff</color>
+    <color name="d2d2d2">#d2d2d2</color>
+    <color name="e8e8e8">#e8e8e8</color>
+    <color name="head">#F2F2F2</color>
+    <color name="text_blue_color">#1989da</color>
+    <color name="btn_no_register">#F56432</color>
+    <color name="bg_default">#ededed</color>
+    <!-- A dark Holo shade of green 111111111111111 -->
+    <color name="holo_green_dark">#08EAC1</color>
+    <!-- A light Holo shade of green 2222222222222 -->
+    <!-- A light Holo shade of orange   33333333333 -->
+    <color name="horange">#82F1DD</color>
+    <color name="hgreen">#71D8C5</color>
+    <!-- A light Holo shade of red    4444444444444 -->
+    <color name="hred">#C0F2E9</color>
+    <color name="ic_fans">#69696d</color>
+    <color name="focus_929aa0">#929aa0</color>
+    <color name="shread_F9C82D">#F9C82D</color>
+    <color name="shread_54B645">#54B645</color>
+    <color name="shread_D7503C">#D7503C</color>
+    <color name="shread_C5C5C5">#C5C5C5</color>
+    <color name="shread_444444">#444444</color>
+    <color name="ic_text">#959595</color>
+    <color name="ic_mh1">#ff8400</color>
+    <color name="ic_mh2">#ffa94d</color>
+    <color name="bg_title">#71D8C5</color>
+    <color name="ic_title">#444444</color>
+    <color name="ic_my1">#df1c41</color>
+    <color name="ic_my2">#e9617a</color>
+    <color name="white">#FFFFFF</color>
+    <color name="Has_been_focused_on">#F8F8F8</color>
+    <color name="focused">#e8e8e8</color>
+    <color name="gold">#b89766</color>
+    <color name="transparent">#00000000</color>
+    <color name="blue">#034ea2</color>
+    <color name="whitesmoke">#F5F5F5</color>
+    <color name="black">#000000</color>
+    <color name="lightgreen">#7cd12e</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#ffff6600</color>
+    <color name="depblue">#000099</color>
+    <color name="navyblue">#215099</color>
+    <color name="depgreen">#009900</color>
+    <color name="item_selected">#ff082c78</color>
+    <color name="background">#9ba</color>
+    <color name="blue_bg">#085a9f</color>
+    <color name="grey">#6c6c6c</color>
+    <color name="gray">#808080</color>
+    <color name="gainsboro">#DCDCDC</color>
+    <color name="lightblack">#ff202020</color>
+    <color name="dianjione">#d4d4d4</color>
+    <color name="dianjitwo">#c8c8c8</color>
+    <color name="yellow">#fff200</color>
+    <color name="silver">#00ffffff</color>
+    <color name="sign_in_gray">#7e7e7e</color>
+    <color name="tran">#00000000</color>
+    <color name="silvergray">#CFCFCF</color>
+    <color name="actionitempressed">#ffcb05</color>
+    <color name="spotgoods_table_head">#719bca</color>
+    <color name="spotgoods_table_row">#a3bcdf</color>
+    <color name="shopcar_bottom">#d4e6ff</color>
+    <color name="list_split">#f5f5f5</color>
+    <color name="list_line">#cccccc</color>
+    <color name="read">#ef4320</color>
+    <color name="background_color">#ffd1dce9</color>
+    <color name="text_color">#ff666666</color>
+    <color name="TextColorBlack">#FF000000</color>
+    <color name="TextColorWhite">#FFFFFFFF</color>
+    <color name="BgColor">#ffd1dce9</color>
+    <color name="itempressed">#ffebd2</color>
+    <color name="itemunpressed">#00000000</color>
+    <color name="item1">#e5e5e5</color>
+    <color name="item2">#eeeeee</color>
+    <color name="bg_gray">#EAEAEA</color>
+    <color name="bg_light_gray">#F6F6F6</color>
+    <color name="dislike_bg_pressed">#484848</color>
+    <color name="shape_btn_normal">#068592</color>
+    <color name="shape_btn_pressed">#024959</color>
+
+    <!-- LIST BORDER COLOR -->
+    <color name="rounded_container_border">#ffb7babb</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - DEFAULT -->
+    <color name="base_start_color_default">#FFFFFF</color>
+    <color name="base_end_color_default">#FFFFFF</color>
+
+    <!-- ITEM BACKGROUND COLOR - STATE - PRESSED -->
+    <color name="base_start_color_pressed">#fffcfcfc</color>
+    <color name="base_end_color_pressed">#ffd7d7d7</color>
+
+    <!-- ITEM TEXT COLORS - STATES - PRESSED AND DEFAULT -->
+    <color name="text_color_default">#000000</color>
+    <color name="text_color_pressed">#ffffff</color>
+
+</resources>

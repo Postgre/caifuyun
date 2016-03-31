@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/head"
+    >
+    
+    <include layout="@layout/include_title" />
+    
+    <EditText 
+        android:id="@+id/option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="200dp"
+        android:hint="输入您的建议"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="您总共可以输入200个字"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        />
+    
+             <Button 
+                   android:id="@+id/sure"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:layout_marginLeft="30dp"
+                   android:layout_marginRight="30dp"
+                   android:text="提交"
+                   android:gravity="center"
+                   android:layout_gravity="bottom"
+                   android:layout_marginTop="20dp"
+                   android:textColor="@color/white"
+                   android:background="#1988db"
+                   android:layout_marginBottom="16dp"
+                 />
+</LinearLayout>

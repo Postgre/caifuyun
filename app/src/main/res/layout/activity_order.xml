@@ -1,0 +1,254 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical"
+    tools:context="com.zepan.caifuyun.activity.OrderActivity" >
+
+    <include layout="@layout/include_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fcfcfc"
+        android:orientation="vertical"
+        android:paddingLeft="16dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/tv_product"
+                style="@style/tv_release_product"
+                android:text="@string/tv_product" />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/tv_product"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/your_name"
+                style="@style/tv_release_product"
+                android:text="@string/your_name" />
+
+            <TextView
+                android:id="@+id/tv_your_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/your_name"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/mobile_phone"
+                style="@style/tv_release_product"
+                android:text="@string/mobile_phone" />
+
+            <TextView
+                android:id="@+id/tv_mobile_phone"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/mobile_phone"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <FrameLayout style="@style/lines_d2d2d2" />
+
+        <RelativeLayout
+            android:id="@+id/ly_customer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/tv_customer"
+                style="@style/tv_release_product"
+                android:text="@string/tv_customer" />
+
+            <TextView
+                android:id="@+id/select_customername"
+                style="@style/style1988db_14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="9dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/tv_customer"
+                android:background="@drawable/select_border_bg_home"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="选择客户" />
+        </RelativeLayout>
+
+        <FrameLayout 
+            android:id="@+id/line"
+            style="@style/lines_d2d2d2" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc"
+        android:paddingLeft="16dp" >
+
+        <TextView
+            android:id="@+id/reservation_amount"
+            style="@style/tv_release_product"
+            android:text="@string/reservation_amount" />
+
+        <com.zepan.android.widget.CheckableEditText
+            android:id="@+id/tv_reservation_amount"
+            style="@style/style7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="22dp"
+            android:layout_toLeftOf="@+id/wan"
+            android:layout_toRightOf="@+id/reservation_amount"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="输入预约金额"
+            android:maxLength="20"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/wan"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="16dp"
+            android:text="万" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc"
+        android:paddingLeft="16dp" >
+
+        <TextView
+            android:id="@+id/tv_order_style"
+            style="@style/tv_release_product"
+            android:text="预约方式" />
+
+        <RadioGroup
+            android:id="@+id/rg_channel_order"
+            style="@style/style1988db_14"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/tv_order_style"
+            android:background="@color/fcfcfc"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="10dp" >
+
+            <RadioButton
+                android:id="@+id/rb_direct_entry"
+                style="@style/tv_release_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:text="直客报单" />
+
+            <RadioButton
+                android:id="@+id/rb_channel_entry"
+                style="@style/style12_757575"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:text="渠道报单" />
+        </RadioGroup>
+        
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <RelativeLayout
+        android:id="@+id/rl_choice_channel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/fcfcfc"
+        android:paddingLeft="16dp" >
+
+        <TextView
+            android:id="@+id/tv_choice_channel"
+            style="@style/tv_release_product"
+            android:text="选择渠道" />
+
+        <TextView
+            android:id="@+id/tv_border_choice_channel"
+            style="@style/style1988db_14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="9dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/tv_choice_channel"
+            android:background="@drawable/select_border_bg_home"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="选择渠道" />
+    </RelativeLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+    <Button
+        android:id="@+id/Submit_Booking"
+        style="@style/style14_white"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/select_home_btn"
+        android:text="@string/submitbooking" />
+
+</LinearLayout>

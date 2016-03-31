@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.zepan.caifuyun"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <application
+        android:name="com.zepan.caifuyun.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="蜜蜂云"
+        android:theme="@style/AppTheme"
+        tools:replace="name,allowBackup,icon,label,theme">
+
+        <!-- 友盟AppKey -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="55826da867e58e1bef0002b6" >
+        </meta-data>
+        <!-- 百度地图key:开发者申请的key -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="cUUSzQmgF0fdueNQ3aEVLFXE" />
+        <!-- #####################################⬇️融云相相关配置#################### -->
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="8luwapkvu1tal" />
+
+        <service
+            android:name="io.rong.push.PushService"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.push" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="io.rong.push.CommandService"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="io.rong.command" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push" >
+            <intent-filter>
+                <action android:name="io.rong.imlib.action.push.heartbeat" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc" />
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:process=":ipc" >
+        </service>
+        <service android:name="io.rong.imlib.ReConnectService" />
+
+        <receiver android:name="io.rong.imlib.ConnectChangeReceiver" />
+        <receiver android:name="io.rong.imlib.ipc.PushMessageReceiver" >
+            <intent-filter>
+                <action android:name="io.rong.push.message" />
+            </intent-filter>
+        </receiver>
+
+        <!-- end -->
+        <!-- #####################################⬆️融云相相关配置########################### -->
+        <!-- 友盟start -->
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- 人人SSO授权所需的OAuthActivity -->
+        <activity
+            android:name="com.renn.rennsdk.oauth.OAuthActivity"
+            android:configChanges="orientation|navigation|keyboardHidden" />
+        <!-- 微信回调activity -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 友盟end -->
+
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.HomeFragment"
+            android:label="@string/title_activity_home_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.MessageFragment"
+            android:label="@string/title_activity_message_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.CustomerFragment"
+            android:label="@string/title_activity_customer_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.OfficeFragmnet"
+            android:label="@string/title_activity_office_fragmnet" >
+        </activity>
+        <activity
+            android:name=".activity.ProductListActivity"
+            android:label="@string/title_activity_list_product" >
+        </activity>
+        <activity
+            android:name=".activity.ProductIntroductionActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <!-- 预约 -->
+        <activity
+            android:name=".activity.OrderActivity"
+            android:label="@string/title_activity_order" >
+        </activity>
+        <!-- 报单 -->
+        <activity
+            android:name=".activity.FormActivity"
+            android:label="@string/title_activity_form" >
+        </activity>
+        <!-- 申请合同 -->
+        <activity
+            android:name=".activity.ForContractActivity"
+            android:label="@string/title_activity_for_contract" >
+        </activity>
+        <!-- 获取资料 -->
+        <activity android:name=".activity.ObtainInformationActivity" >
+        </activity>
+        <activity
+            android:name=".activity.NewAddressActivity"
+            android:label="@string/title_activity_new_address" >
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegisterOneActivity"
+            android:label="@string/title_activity_registerOne" >
+        </activity>
+        <activity
+            android:name=".activity.RegisterTwoActivity"
+            android:label="@string/title_activity_registerTwo" >
+        </activity>
+        <activity android:name=".activity.ReceiveAddressActivity" >
+        </activity>
+        <activity
+            android:name=".activity.ManagerReceiveAddressActivity"
+            android:label="@string/title_activity_manager_receive_address" >
+        </activity>
+        <activity
+            android:name="com.zepan.android.widget.AchievePhotoActivity"
+            android:theme="@style/dialog_style01"
+            >
+
+        </activity>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" >
+        </activity>
+        <activity
+            android:name=".activity.SearchOneActivity"
+            android:label="@string/title_activity_search_one" >
+        </activity>
+        <activity
+            android:name=".activity.AddContractActivity"
+            android:label="@string/title_activity_add_contract" >
+        </activity>
+        <activity
+            android:name=".activity.ProvinceActivity"
+            android:label="@string/title_activity_add_contract" >
+        </activity>
+        <activity
+            android:name=".activity.CityActivity"
+            android:label="@string/title_activity_add_contract" >
+        </activity>
+        <activity
+            android:name=".activity.DistrictActivity"
+            android:label="@string/title_activity_add_contract" >
+        </activity>
+        <activity
+            android:name=".activity.RegisterThreeActivity"
+            android:label="@string/title_activity_register_three" >
+        </activity>
+        <activity
+            android:name=".activity.CertificationActivity"
+            android:label="@string/title_activity_certification"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.CertificationTwoActivity"
+            android:label="@string/title_activity_certification_two" >
+        </activity>
+        <activity
+            android:name=".activity.CreateCompanyActivity"
+            android:label="@string/title_activity_create_company" >
+        </activity>
+        <activity
+            android:name=".activity.CertificationCpInfoActivity"
+            android:label="@string/title_activity_certification_cp_info" >
+        </activity>
+        <activity
+            android:name=".activity.SelectCustomerActivity"
+            android:label="@string/title_activity_select_customer" >
+        </activity>
+        <activity
+            android:name=".activity.SelectCustomerSearchActivity"
+            android:label="@string/title_activity_select_customer_search" >
+        </activity>
+        <activity
+            android:name=".activity.CluesActivity"
+            android:label="@string/title_activity_clues" >
+        </activity>
+        <activity
+            android:name=".activity.CluesTwoActivity"
+            android:label="@string/title_activity_clues_two" >
+        </activity>
+        <activity
+            android:name=".activity.AnErrorActivity"
+            android:label="@string/title_activity_an_error" >
+        </activity>
+        <activity
+            android:name=".activity.SelectCustomerTwoActivity"
+            android:label="@string/title_activity_select_customer_two" >
+        </activity>
+        <activity
+            android:name=".activity.IndividualCustomersActivity"
+            android:label="@string/title_activity_individual_customers" >
+        </activity>
+        <activity android:name=".activity.AffiliatedPersonActivity" >
+        </activity>
+        <activity
+            android:name=".activity.NewAssociatesActivity"
+            android:label="@string/title_activity_new_associates" >
+        </activity>
+        <activity
+            android:name=".activity.RemindActivity"
+            android:label="@string/title_activity_remind" >
+        </activity>
+        <activity
+            android:name=".activity.NewRemindActivity"
+            android:label="@string/title_activity_new_remind" >
+        </activity>
+        <activity
+            android:name=".activity.LabelActivity"
+            android:label="@string/title_activity_label" >
+        </activity>
+        <activity
+            android:name=".widget.DailogBottom"
+            android:label="@string/title_activity_dailog_bottom"
+            android:theme="@style/dialog_style01" >
+        </activity>
+        <activity
+            android:name=".activity.NewIndividualCustomersActivity"
+            android:label="@string/title_activity_new_individual_customers" >
+        </activity>
+        <activity
+            android:name=".activity.NewCluesActivity"
+            android:label="@string/title_activity_new_clues"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name=".activity.SelectPhoneActivity"
+            android:label="@string/title_activity_select_phone" >
+        </activity>
+        <activity
+            android:name=".activity.AddfinanceHistoryActivity"
+            android:label="@string/title_activity_addfinance_history" >
+        </activity>
+        <activity
+            android:name=".activity.OrderOrFormActivity"
+            android:label="@string/title_activity_order_or_form" >
+        </activity>
+        <activity
+            android:name=".activity.FormDetailActivity"
+            android:label="@string/title_activity_form_detail" >
+        </activity>
+        <activity
+            android:name=".activity.ContractDetailActivity"
+            android:label="@string/title_activity_form_detail" >
+        </activity>
+        <activity
+            android:name=".activity.DetailActivity"
+            android:label="@string/title_activity_form_detail" >
+        </activity>
+        <activity
+            android:name=".activity.RenewContractActivity"
+            android:label="@string/title_activity_form_detail" >
+        </activity>
+        <activity
+            android:name=".activity.TransactionRecordActivity"
+            android:label="@string/title_activity_transaction_record" >
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".activity.UserInfoFragment"
+            android:label="@string/title_activity_user_info_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.AllClueFragment"
+            android:label="@string/title_activity_all_clue_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.KeyClueFragment"
+            android:label="@string/title_activity_key_clue_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.GeneralClueFragment"
+            android:label="@string/title_activity_general_clue_fragment" >
+        </activity>
+        <activity
+            android:name=".activity.ChannelsManagerActivity"
+            android:label="@string/title_activity_channels_manager" >
+        </activity>
+        <activity android:name=".activity.ChannelCustomersActivity" >
+        </activity>
+        <activity
+            android:name=".activity.LocationActivity"
+            android:label="@string/title_activity_location" >
+        </activity>
+
+        <!-- 销售日报 -->
+        <activity
+            android:name=".activity.SalesJournalActivity"
+            android:label="@string/title_activity_sales_journal" >
+        </activity>
+        <!-- 未批阅 -->
+        <activity
+            android:name=".activity.UnReadDetailsActivity"
+            android:label="@string/title_activity_sales_journal_unread" >
+        </activity>
+        <!-- 已批阅 -->
+        <activity
+            android:name=".activity.ReadDetailsActivity"
+            android:label="@string/title_activity_sales_journal_read" >
+        </activity>
+        <!-- 写日报 -->
+        <activity android:name=".activity.WriteDetailsActivity" >
+        </activity>
+        <!-- 未批阅的编辑页面 -->
+        <activity android:name=".activity.UnReadEditActivity" >
+        </activity>
+        <!-- 编辑页面 -->
+        <activity android:name=".activity.EditJournalActivity" >
+        </activity>
+
+        <!-- 消息的通知页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.MessageNoticeActivity" >
+        </activity>
+
+        <!-- 消息的聊天页面 -->
+        <activity android:name=".activity.ChatActivity" >
+        </activity>
+        <!-- 消息的提醒页面 -->
+        <activity android:name=".activity.MessageRemindActivity" >
+        </activity>
+        <!-- 消息的通讯录页面 -->
+        <activity android:name=".activity.MessageContactsActivity" >
+        </activity>
+        <!-- 消息的个人通讯录页面 -->
+        <activity android:name=".activity.PersonalContactsActivity" >
+        </activity>
+        <!-- 消息的通讯录的详细资料页面 -->
+        <activity android:name=".activity.MessageDetailsActivity" >
+        </activity>
+        <!-- 消息的群聊通讯录页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.GroupContactsActivity" >
+        </activity>
+        <!-- 我的群组页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.MyGroupActivity" >
+        </activity>
+        <!-- 群组的聊天页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.GroupChatActivity" >
+        </activity>
+        <!-- 群组的聊天成员页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.GroupMemberActivity" >
+        </activity>
+        <!-- 群公告页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.GroupNoticeActivity" >
+        </activity>
+        <!-- 群文件页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.GroupFileActivity" >
+        </activity>
+
+        <!-- 报单审核中页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.FormVerifyingActivity" >
+        </activity>
+        <!-- 已成功页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.FormFinishActivity" >
+        </activity>
+
+        <!-- 发现的web页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.FindWebActivity" >
+        </activity>
+        <!-- 会员管理页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.VipManagerActivity" >
+        </activity>
+        <!-- 会员管理的(未报备)详细资料页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.VipManagerDetailsUnreport" >
+        </activity>
+
+        <!-- 设置页面 -->
+        <activity android:name=".activity.UserSetActivity" >
+        </activity>
+        <!-- 设置页面的关于财富云的页面 -->
+        <activity android:name=".activity.UserAboutCaifuyunActivity" >
+        </activity>
+        <!-- 设置页面的意见反馈页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.UserFeedbackActivity" >
+        </activity>
+        <!-- 设置页面的运营管理办法页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.UserRegulationActivity" >
+        </activity>
+        
+        <!-- 我的积分商城页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.IntegralMallActivity" >
+        </activity>
+        <!-- 我的积分商城详情页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.IntegralDetailsActivity" >
+        </activity>
+        
+        <!-- 发行方案页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.DistributionPlanActivity" >
+        </activity>
+        <!-- 新建渠道页面 -->
+        <activity android:name="com.zepan.caifuyun.activity.NewChannelsActivity" >
+        </activity>
+        
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 抽奖页面 -->
+        <activity
+            android:name=".activity.LuckyDrawActivity"
+            android:label="@string/title_activity_lucky_draw" >
+        </activity>
+        <!-- 身份认证 -->
+        <activity
+            android:name="com.zepan.caifuyun.activity.IdentityAuthenticationActivity"
+           >
+        </activity>
+        <!-- 会话 -->
+        <activity android:name="com.zepan.caifuyun.activity.ConversationActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="com.zepan.caifuyun"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

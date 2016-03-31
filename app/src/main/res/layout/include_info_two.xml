@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://com.zepan.android.sdk/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/head"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginTop="20dp" />
+    <!-- 公司 -->
+
+    <LinearLayout
+        android:id="@+id/ly_company"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="公司" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_company_name"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="输入公司名称"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#CDC5B7" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/line"
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 职位 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="职位" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.CheckableEditText
+                android:id="@+id/et_position"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="输入职位"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="#CDC5B7" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 行业 -->
+
+    <LinearLayout
+        android:id="@+id/layout_professional"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="行业" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.WheelTextView
+                android:id="@+id/tv_professional"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="选择行业"
+                android:maxLength="20"
+                android:paddingRight="48dp"
+                android:singleLine="true"
+                app:wheelHeight="200dp"
+                app:wheelValues="@array/wheel_industry" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        style="@style/lines_d2d2d2"
+        android:layout_marginLeft="20dp" />
+    <!-- 公司规模 -->
+
+    <LinearLayout
+        android:id="@+id/layout_scale"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:padding="16dp"
+            android:text="公司规模" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="2.5" >
+
+            <com.zepan.android.widget.WheelTextView
+                android:id="@+id/tv_scale"
+                style="@style/style7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="选择公司规模"
+                android:maxLength="20"
+                android:paddingRight="48dp"
+                android:singleLine="true"
+                app:wheelHeight="200dp"
+                app:wheelValues="@array/wheel_values" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout style="@style/lines_d2d2d2" />
+
+</LinearLayout>

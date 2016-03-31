@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="shapestyle">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <string-array name="wheel_values">
+        <item>小公司(20人一下)</item>
+        <item>中等规模(50人)</item>
+        <item>大公司(100人以上)</item>
+    </string-array>
+    <string-array name="ly_sort">
+        <item>成熟度</item>
+        <item>最近访问时间</item>
+        <item>姓名拼音</item>
+    </string-array>
+    <string-array name="ly_screen">
+        <item>全部客户</item>
+        <item>成熟度三星客户</item>
+        <item>成熟度二星客户</item>
+        <item>成熟度一星客户</item>
+    </string-array>
+    <string-array name="wheel_sex">
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+     <string-array name="wheel_industry">
+        <item>IT</item>
+        <item>医学</item>
+        <item>销售</item>
+        <item>教师</item>
+        <item>金融</item>
+        <item>贸易</item>
+    </string-array>
+    <string-array name="wheel_eduation">
+        <item>高中</item>
+        <item>专科</item>
+        <item>本科</item>
+        <item>研究生</item>
+        <item>博士</item>
+        
+    </string-array>
+    
+    <string-array name="ind_name">
+        <item>邮寄地址</item>
+        <item>设置</item>
+        <item>抽奖</item>
+        <item>积分商城</item>
+    </string-array>
+    
+  <!--    <item>身份认证</item> -->
+    <string-array name="settings">
+        <item>关于蜜蜂云</item>
+        <item>新版本检测</item>
+        <item>推荐蜜蜂</item>
+        <item>意见反馈</item>
+        <item>运营管理办法</item>
+        <item>清除缓存</item>
+    </string-array>
+    
+
+
+</resources>

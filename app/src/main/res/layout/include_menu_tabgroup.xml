@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zepan.android.widget.TabGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/head"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <RadioButton
+        android:id="@+id/igBtn1"
+        style="@style/tabhost_rb_style"
+        android:contentDescription="@string/app_name"
+        android:drawableTop="@drawable/selector_tab_home"
+        android:text="@string/product" />
+
+    <RadioButton
+        android:id="@+id/igBtn3"
+        style="@style/tabhost_rb_style"
+        android:contentDescription="@string/app_name"
+        android:drawableTop="@drawable/selector_tab_find"
+        android:text="@string/customer" />
+
+    <RadioButton
+        android:id="@+id/igBtn2"
+        style="@style/tabhost_rb_style"
+        android:contentDescription="@string/app_name"
+        android:drawableTop="@drawable/selector_tab_notification"
+        android:text="@string/notification" />
+
+    <RadioButton
+        android:id="@+id/igBtn4"
+        style="@style/tabhost_rb_style"
+        android:contentDescription="@string/app_name"
+        android:drawableTop="@drawable/selector_find"
+        android:text="@string/find" />
+
+    <RadioButton
+        android:id="@+id/igBtn5"
+        style="@style/tabhost_rb_style"
+        android:contentDescription="@string/app_name"
+        android:drawableTop="@drawable/selector_tab_myself"
+        android:text="@string/me" />
+
+</com.zepan.android.widget.TabGroup>
